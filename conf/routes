@@ -6,9 +6,8 @@
 GET     /                           controllers.Application.index
 
 # Map static resources from the /public folder to the /assets URL path
-#GET     /assets/*file               controllers.Assets.at(path="/public", file)
-GET	/tasks			    controllers.Application.tasks
-POST	/tasks			    controllers.Application.newTask
+GET	/todo			    controllers.Application.task
+POST	/todo 			    controllers.Application.newTask
 POST    /deleteTask		    controllers.Application.deleteTask(id: Long)
 
 GET	/assets/*file		    controllers.Assets.at(path="/public", file)
