@@ -1,6 +1,7 @@
 package models
 
 import play.api.db._
+import play.api.db.DB
 import play.api.Play.current
 
 import anorm._
