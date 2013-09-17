@@ -7,6 +7,10 @@ import play.api.Play.current
 import anorm._
 import anorm.SqlParser._
 
+// import com.flaptor.indextank.apiclient.IndexTankClient;
+// import com.flaptor.indextank.apiclient.IndexTankClient.Index;
+// import com.flaptor.indextank.apiclient.IndexTankClient.Query;
+
 case class Task(id: Long, label: String)
 
 object Task {
@@ -32,7 +36,9 @@ object Task {
   }
 
   val task = {
-    get[Long]("id") ~ 
+//    IndexTankClient client = new IndexTankClient("http://:adynadygapyt@ygypub.api.indexden.com");
+//    Index index = client.getIndex("idx");
+    get[Long]("id") ~
     get[String]("label") map {
       case id~label => Task(id, label)
     }
